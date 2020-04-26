@@ -1,0 +1,31 @@
+{
+  "name": "release-cli",
+  "version": "1.0.0",
+  "description": "在本地上传指定打包的资源到指定的服务器如(xxx.zip)，然后执行启动脚本",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "release-cli": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dengnan123/uploadAndReleaseSource.git"
+  },
+  "author": "dany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dengnan123/uploadAndReleaseSource/issues"
+  },
+  "homepage": "https://github.com/dengnan123/uploadAndReleaseSource#readme",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.1",
+    "lodash": "^4.17.15",
+    "node-ssh": "^7.0.0",
+    "scp2": "^0.5.0",
+    "shelljs": "^0.8.3",
+    "signale": "^1.4.0"
+  }
+}
