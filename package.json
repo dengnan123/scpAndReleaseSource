@@ -1,6 +1,6 @@
 {
   "name": "df-release-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "在本地上传指定打包的资源到指定的服务器如(xxx.zip)，然后执行启动脚本",
   "main": "index.js",
   "scripts": {
