@@ -23,3 +23,10 @@ yarn add df-release-cli --dev
 ```
 运行
 npm run r 
+
+主意：release-cli默认读取的是release.json，如果有多个配置请自行指定根目录下的json配置
+
+```
+"r": "release-cli --config test.json"
+
+```
