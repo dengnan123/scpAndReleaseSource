@@ -14,7 +14,7 @@ function readData(_path) {
 
 function writeData(_path, data) {
   fs.outputFileSync(_path, data, {
-    encoding: "utf8"
+    encoding: "utf8",
   });
 }
 
@@ -52,6 +52,25 @@ function getBaseJson(_pwdPath) {
 //   return v.includes('')
 // }
 
+function getArgvs() {
+  const options = process.argv;
+  let arr = [];
+  if (options.length > 2) {
+    arr = options.slice(2);
+  }
+  return arr;
+}
+
+function getConfigName() {
+  const opts = getArgvs();
+  // 默认取--config 后面的参数
+  for (const [index, value] of opts.entries()) {
+    if (value === "--config") {
+      return opts[index + 1]; // 返回--config 后面的参数
+    }
+  }
+}
+
 module.exports = {
   formatJson,
   readData,
@@ -59,5 +78,7 @@ module.exports = {
   moveFile,
   template,
   execShell,
-  getBaseJson
+  getBaseJson,
+  getArgvs,
+  getConfigName
 };
