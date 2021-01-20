@@ -10,14 +10,13 @@ shell.exec("pwd", async function (err, pwd) {
     return;
   }
   const configName = getConfigName();
-  console.log("configName...", configName);
+  console.log("configName.......", configName);
   if (configName && !configName.includes(".json")) {
     throw new Error(`${configName} is not a  json file`);
   }
-
   const _pwd = getPwd(pwd);
   const configNamePath = `${_pwd}/${configName}`;
-  console.log("configNamePath", configNamePath);
+  console.log("configNamePath.....", configNamePath);
   if (configName && !fs.existsSync(configNamePath)) {
     throw new Error(`${configNamePath} not exist `);
   }

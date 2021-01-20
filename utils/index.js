@@ -63,6 +63,7 @@ function getArgvs() {
 
 function getConfigName() {
   const opts = getArgvs();
+  console.log('optsopts..',opts)
   // 默认取--config 后面的参数
   for (const [index, value] of opts.entries()) {
     if (value === "--config") {
